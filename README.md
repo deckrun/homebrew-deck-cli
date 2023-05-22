@@ -1,2 +1,2 @@
-# -homebrew-deck-cli
+# homebrew-deck-cli
 Homebrew Deck CLI
