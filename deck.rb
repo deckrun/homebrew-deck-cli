@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Deploy your apps to your own Platform as a Service."
   homepage "https://deckrun.com/"
-  version "0.0.26"
+  version "0.0.27"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.26/deck_Darwin_x86_64.tar.gz"
-      sha256 "fe81c6b55ddbf87101d6396f7ce459903529616962d8582e55af2ea79a8cfec2"
+    on_intel do
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.27/deck_Darwin_x86_64.tar.gz"
+      sha256 "e6c89a09566d82669fffd02cdd5530450a8e0b1d0b4ca21c8e11877db929ecd2"
 
       def install
         bin.install "deck"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.26/deck_Darwin_arm64.tar.gz"
-      sha256 "ba8a1b1a333a7b925c274706c5ad78f81cb9f26e1b027f2ffa0ebc1d9db0ff3b"
+    on_arm do
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.27/deck_Darwin_arm64.tar.gz"
+      sha256 "c17030c7c11d08c47c0861d31a0664dfc12862ffcea2bf27eb6012ff0a483ad7"
 
       def install
         bin.install "deck"
@@ -28,20 +28,24 @@ class Deck < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.26/deck_Linux_arm64.tar.gz"
-      sha256 "699042153cfea6c8b3cad70c7800b9424f84ebe047908061e9b54da6dc46e3f7"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.27/deck_Linux_x86_64.tar.gz"
+        sha256 "848175cd1d6660b85dd0715359096de63040e4efa45b289b19267eea00a17243"
 
-      def install
-        bin.install "deck"
+        def install
+          bin.install "deck"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.26/deck_Linux_x86_64.tar.gz"
-      sha256 "f518bc93347d556bcdc88a86ae199327d80767069b4058c7c32b2729170b4452"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.27/deck_Linux_arm64.tar.gz"
+        sha256 "1401847eca1469804c795a191ea966697d18460aec10a6a164cd1978e783b77a"
 
-      def install
-        bin.install "deck"
+        def install
+          bin.install "deck"
+        end
       end
     end
   end
