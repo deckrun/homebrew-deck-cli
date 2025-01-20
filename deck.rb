@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Deploy your apps to your own Platform as a Service."
   homepage "https://deckrun.com/"
-  version "0.0.58"
+  version "0.0.59"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.58/deck_Darwin_x86_64.tar.gz"
-      sha256 "b03223aa7d7c431929aa04ce847f3705d4fce65fdb468ea703b6537f9aef48a8"
+    if Hardware::CPU.intel?
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.59/deck_Darwin_x86_64.tar.gz"
+      sha256 "d640b2467f21b16b438c54051147da0f3b6fe8484ae583645fc2fd9689c1433a"
 
       def install
         bin.install "deck"
       end
     end
-    on_arm do
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.58/deck_Darwin_arm64.tar.gz"
-      sha256 "11938f34e4b25b70a9564ac8fcee3b2b6c6a40e461624f0ba06c5e83297156f6"
+    if Hardware::CPU.arm?
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.59/deck_Darwin_arm64.tar.gz"
+      sha256 "21f028af5eba1e6a01212361fb2d3d6b760198a7302267585f4f445eb9efae50"
 
       def install
         bin.install "deck"
@@ -28,20 +28,20 @@ class Deck < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.58/deck_Linux_x86_64.tar.gz"
-        sha256 "a70707d122a1cb76f637dcfd8b0745c0ede5e788a85907aa1e8894b5d1441197"
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.59/deck_Linux_x86_64.tar.gz"
+        sha256 "e53fce526af690d1fd39739f4e0d6f43eab6e72ea5bf269eff2eb1cd45417659"
 
         def install
           bin.install "deck"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.58/deck_Linux_arm64.tar.gz"
-        sha256 "d72f0f66914453622c9932d417123c59ff4e647e50a617cf42310499556cda1a"
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.59/deck_Linux_arm64.tar.gz"
+        sha256 "5d6ece8ec97ca906e69d93a24f8217e2b8a110218d3c8bad666ec890c1d0483e"
 
         def install
           bin.install "deck"
