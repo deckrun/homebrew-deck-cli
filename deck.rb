@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Deploy your apps to your own Platform as a Service."
   homepage "https://deckrun.com/"
-  version "0.0.73"
+  version "0.0.74"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.73/deck_Darwin_x86_64.tar.gz"
-      sha256 "253db2d78bd048788f827779694102b8c2519a3b0df1bd0acccdfef412d533eb"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.74/deck_Darwin_x86_64.tar.gz"
+      sha256 "49285e9536784a5adb35b1cc75c6f6a1e856b4a678a17a0b43dd7702230e51ab"
 
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.73/deck_Darwin_arm64.tar.gz"
-      sha256 "87871b5ec62c4eeae27bb1c9216a46ffc44346a55cb568758b13a07b41af00d7"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.0.74/deck_Darwin_arm64.tar.gz"
+      sha256 "9ecd35d70f605022982bdd8c9a6fd1ba961c0dc96f65f873ea6d1ba24b99a061"
 
       def install
         bin.install "deck"
@@ -30,8 +30,8 @@ class Deck < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.73/deck_Linux_x86_64.tar.gz"
-        sha256 "2d7e6a752b8e40d4e5abe5a771565966943192e8b685af27bfdde1f64c5a2f33"
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.74/deck_Linux_x86_64.tar.gz"
+        sha256 "26495b7fbf276500630ffcd227b91e9b51fc6aaf1881d9c18132a4ee9bb6f860"
 
         def install
           bin.install "deck"
@@ -40,8 +40,8 @@ class Deck < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.73/deck_Linux_arm64.tar.gz"
-        sha256 "9bf91a532c0914b4a31d1260c3269a27ac24896f82c47dadde2e79f9c9418591"
+        url "https://github.com/deckrun/deck-cli/releases/download/v0.0.74/deck_Linux_arm64.tar.gz"
+        sha256 "dc9857aa118deb8a4621af7f272f136fabeb9330912240e5c0137fad024b61fe"
 
         def install
           bin.install "deck"
