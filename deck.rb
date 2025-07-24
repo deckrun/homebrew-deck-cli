@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Deploy your apps to your own Platform as a Service."
   homepage "https://deckrun.com/"
-  version "0.1.59"
+  version "0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.1.59/deck_Darwin_x86_64.tar.gz"
-      sha256 "7e2ccaab90a52c062a2d64c83ffde2d52439b32818feb84c55e403f717341aa8"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.5/deck_Darwin_x86_64.tar.gz"
+      sha256 "595407e279e3234f187fbcf641b9856e3689fa85c84da8051bdae281027af7c5"
 
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.1.59/deck_Darwin_arm64.tar.gz"
-      sha256 "70954fec86e1779e0be1b1799d484c1491f7b51a2a8bb362a5ebd43aef05622b"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.5/deck_Darwin_arm64.tar.gz"
+      sha256 "28945f041b67523c92301d679e0cebfc5a8d2f1ffa8015da2b4f29fd24a0eff4"
 
       def install
         bin.install "deck"
@@ -29,15 +29,15 @@ class Deck < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.1.59/deck_Linux_x86_64.tar.gz"
-      sha256 "8d43035e9a951ca6c4ecf0502d98729a46a5f7739caff4b39778bb200a90492b"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.5/deck_Linux_x86_64.tar.gz"
+      sha256 "1a95a12c65877f21c0781f0206b0dba06ab1e193378d9f5e3483e6979dc1af13"
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.1.59/deck_Linux_arm64.tar.gz"
-      sha256 "ef120085fbe42f2682244933786374c33015eaf651d1493a72fe4582f7ed1d90"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.5/deck_Linux_arm64.tar.gz"
+      sha256 "31052594c57e193b0c76051bfb68174496fa747946fec4c6e1a1e81eea5dc319"
       def install
         bin.install "deck"
       end
