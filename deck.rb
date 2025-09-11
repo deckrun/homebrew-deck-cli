@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Simplify Deployments, maximize productivity."
   homepage "https://deckrun.com/"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.1/deck_Darwin_x86_64.tar.gz"
-      sha256 "b18e4e7e0cec5b3234b2a628203149202c66ca8be80a930327f43c9f833871b3"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.2/deck_Darwin_x86_64.tar.gz"
+      sha256 "dc86eca1aa74de3a0bc3e5cf7c196d8615494c5ac13078a13f0e64ed02593345"
 
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.1/deck_Darwin_arm64.tar.gz"
-      sha256 "8436f591be0fdfbfe323572beadb6076532e331b86ff9aa72272bbe4fcbaf1eb"
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.2/deck_Darwin_arm64.tar.gz"
+      sha256 "ac417d72705913e08f5b1d8037342000d3e72e79f33abd7554dc0f2d8fdb7819"
 
       def install
         bin.install "deck"
@@ -28,16 +28,16 @@ class Deck < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.1/deck_Linux_x86_64.tar.gz"
-      sha256 "80c3213d923b72626bd8214b21f3423f3e797ecfa63b84d010b8351c2e3a0a3a"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.2/deck_Linux_x86_64.tar.gz"
+      sha256 "813699cdc782b8b1effebd2c4ed76e85ff0b24efb3204e3206cdf12cd3d54ed0"
       def install
         bin.install "deck"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.1/deck_Linux_arm64.tar.gz"
-      sha256 "8cfebcaf23815b615dd2eef8732f54c99c1be7c80888ed6d6742739db5c7681f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/deckrun/deck-cli/releases/download/v0.9.2/deck_Linux_arm64.tar.gz"
+      sha256 "5214d1c35c8cba345fd047b5d4f2b73a77e55079f0b97a4965bcee01414bd6c4"
       def install
         bin.install "deck"
       end
