@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Simplify Deployments, maximize productivity."
   homepage "https://deckrun.com/"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.2/deck_Darwin_x86_64.tar.gz"
-      sha256 "bb768e56e10e64810bd3b320afb08c2944245ed51111af11013f88a878b64b9a"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.3/deck_Darwin_x86_64.tar.gz"
+      sha256 "efedec1858db87dcb157a722bf63baf42baf080201540ed6653835bb62c4bcb4"
 
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.2/deck_Darwin_arm64.tar.gz"
-      sha256 "3cbf8310f86c88f4378a60521dda52d82f0cbaae524b92f3884f6ef6555f68a8"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.3/deck_Darwin_arm64.tar.gz"
+      sha256 "3c01b6bbbbfacb8917039467c0ccf5038d5d05fef991f7683dbe994eec531f07"
 
       def install
         bin.install "deck"
@@ -29,15 +29,15 @@ class Deck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.2/deck_Linux_x86_64.tar.gz"
-      sha256 "991c2ef4279832c35a47eb3d2e3c43d6041f71a954f55c3618da956cce951ae5"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.3/deck_Linux_x86_64.tar.gz"
+      sha256 "ada6cbfc481df7da5f803684131aea23054c367cf289c4453e34500558292028"
       def install
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.2/deck_Linux_arm64.tar.gz"
-      sha256 "361fdd932612ebdbb7aabb5eb6f4358138ec443be8fadd10af674e544fcbf622"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.3/deck_Linux_arm64.tar.gz"
+      sha256 "66b9f3821518758c9fd6018867d053be7f554fb1f581322a34203fb36a1ea079"
       def install
         bin.install "deck"
       end
