@@ -5,23 +5,23 @@
 class Deck < Formula
   desc "Simplify Deployments, maximize productivity."
   homepage "https://deckrun.com/"
-  version "1.0.8"
+  version "1.0.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.8/deck_Darwin_x86_64.tar.gz"
-      sha256 "e7c6a72f9cf7fb8683b0f6cb02928c2818fb9261810ac9809a41de5410dccc79"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.9/deck_Darwin_x86_64.tar.gz"
+      sha256 "161e9c0052f2a5d48b0d98fdf91532df25b6b570b91ac75233f35cae462d9902"
 
-      def install
+      define_method(:install) do
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.8/deck_Darwin_arm64.tar.gz"
-      sha256 "b66017a88a6756013341c1722057502de6523ec63064974ae45edb5a0c083c14"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.9/deck_Darwin_arm64.tar.gz"
+      sha256 "4173877bd9abe39d324ca1723b642c64efdffb7a163e7e4fb76ecac114a80324"
 
-      def install
+      define_method(:install) do
         bin.install "deck"
       end
     end
@@ -29,16 +29,16 @@ class Deck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.8/deck_Linux_x86_64.tar.gz"
-      sha256 "46aa7dc90a069f6a3a82e422ac468ab09145690291c5e0ab3df66670601318e2"
-      def install
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.9/deck_Linux_x86_64.tar.gz"
+      sha256 "2f6ee5ac05fa41dec1510faf4e5a7d19c479eae287ef31e5ca4e3ca03742626a"
+      define_method(:install) do
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.8/deck_Linux_arm64.tar.gz"
-      sha256 "428753f4f623cf06743c75cb7a440f7ea924e8300fd8061b868fb8655bdc04bb"
-      def install
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.9/deck_Linux_arm64.tar.gz"
+      sha256 "48205058e00324f57d99d2d2b36a8d0bcae2f29a53a5ed9ec88fdd6e25955003"
+      define_method(:install) do
         bin.install "deck"
       end
     end
