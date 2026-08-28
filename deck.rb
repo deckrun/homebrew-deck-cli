@@ -5,21 +5,21 @@
 class Deck < Formula
   desc "Simplify Deployments, maximize productivity."
   homepage "https://deckrun.com/"
-  version "1.0.18"
+  version "1.0.19"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.18/deck_Darwin_x86_64.tar.gz"
-      sha256 "8b1c14d6dbd391f829a170459ff9989ab62e6a8b44df22705fb4a978695c034b"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.19/deck_Darwin_x86_64.tar.gz"
+      sha256 "d19e92acc48df3b9c5cf3a5c02cc537dfbfc90f9d7ca61a75ef87a586adaee71"
 
       define_method(:install) do
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.18/deck_Darwin_arm64.tar.gz"
-      sha256 "2e7878c31d01cc1d62aedddb90bacf51ca706cf01f2ebb4fa9f3369a6579c263"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.19/deck_Darwin_arm64.tar.gz"
+      sha256 "7dc62936522704346892a310c75812245a33785ce654ae4cd0309a3a783e24bd"
 
       define_method(:install) do
         bin.install "deck"
@@ -29,15 +29,15 @@ class Deck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.18/deck_Linux_x86_64.tar.gz"
-      sha256 "527b910c237ef059408f3fe51e9ecba783c349a29a37d1404b00ad8b93035a94"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.19/deck_Linux_x86_64.tar.gz"
+      sha256 "40c653063e3c2567bb454159bee3a6caf8f552ee3509570af9a613c94f23a2cc"
       define_method(:install) do
         bin.install "deck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.18/deck_Linux_arm64.tar.gz"
-      sha256 "b3cf674e30d571cf5f844e205824a0620a6cb082dbec6a84b26384f51d3a4712"
+      url "https://github.com/deckrun/deck-cli/releases/download/v1.0.19/deck_Linux_arm64.tar.gz"
+      sha256 "a7652bbd181c1f7c6337d22464dbbfd2e161ae930294da1b949b056105cfc168"
       define_method(:install) do
         bin.install "deck"
       end
